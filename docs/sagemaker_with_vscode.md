@@ -19,10 +19,10 @@ chmod +x install-codeserver.sh
 
 ```
 
-3. 重整頁面，點選 **Code Server** 進入 vscode
+3. 重整頁面，點選 **Code Server** 進入 vscode，之後就可以在 vscode 上 Coding 了！
 
+*BTW，如果新增一個 file 要很久，建議重開 studio 或是 code-server，應該能夠解決。*
 
-*個人建議若要在上面開發，用 jupyter lab 會好一點，連到 code server 在做其他動作會很慢，extension 也很多版本要跟 code server 對應。*
 
 ### 參考
 1. 建立環境：https://aws.amazon.com/tw/blogs/machine-learning/host-code-server-on-amazon-sagemaker/
