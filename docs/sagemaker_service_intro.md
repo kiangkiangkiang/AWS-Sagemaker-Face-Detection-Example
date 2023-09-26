@@ -1,4 +1,4 @@
-# Sagemaker 功能一覽
+# Sagemaker 快速訓練/部署模型
 
 使用到的功能：
 1. Notebook Instance
@@ -116,6 +116,8 @@ Sagemaker ML 任務整體服務框架如下：
 在 Sagemaker 中，想要部署模型到雲端，可使用「endpoint」，整體服務概念如下：
 
 ![](./sagemaker_serving.png)
+
+基本上可以大致把整個 Serving 流程想像成：客戶向雲端發出請求 -> 通過 GateWay 整合請求來導向不同的雲端服務 (管理、整合、過濾不同請求) -> 觸發 Lambda 後會轉發給 Sagemaker 模型做推論 -> Sagemaker 的 Autoscaling 會根據 Lambda 的請求流量來自動擴增縮減計算資源（越多請求擴增越多計算資源）-> 推論完後再由 Lambda, Gateway 回傳給客戶模型預測的結果。
 
 接著，我們就可以從上述訓練好的模型進行推論。模型一樣會預設存在 s3 上。而點選右上角「建立模型」，建立完後選擇「建立端點」。
 
