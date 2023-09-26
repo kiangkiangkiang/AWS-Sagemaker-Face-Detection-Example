@@ -113,8 +113,14 @@ Sagemaker ML 任務整體服務框架如下：
 
 ## 模型部署
 
+在 Sagemaker 中，想要部署模型到雲端，可使用「endpoint」，整體服務概念如下：
+
+![](./sagemaker_serving.png)
 
 接著，我們就可以從上述訓練好的模型進行推論。模型一樣會預設存在 s3 上。而點選右上角「建立模型」，建立完後選擇「建立端點」。
+
+
+
 
 
 
@@ -138,6 +144,7 @@ Sagemaker ML 任務整體服務框架如下：
 1. 業務問題清楚定義後，應先評估訓練模型的標記成本，再選擇是否使用 AWS 的標記方案（可用 few-shot 簡單實測模型成效）
 2. 若快速建立訓練任務（使用內建方案），需要針對個別方案決定輸入格式。
 3. 內建方案清單：https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/algos.html
+4. 自己包 container 記得實作 `server()` function，可參考[這裡](https://www.youtube.com/watch?v=YQyid2uLOvI)
 ## 總結
 
 
@@ -148,3 +155,9 @@ Sagemaker ML 任務整體服務框架如下：
 2. 使用 Ground Truth 標記資料訓練：https://aws.amazon.com/tw/blogs/machine-learning/easily-train-models-using-datasets-labeled-by-amazon-sagemaker-ground-truth/
 3. Sagemaker 演算法：https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/algorithms-choose.html
 4. Sagemaker 訓練任務：https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/how-it-works-training.html
+5. Sagemaker 建立端點：https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html
+
+
+
+## 待讀
+1. 流量測試：https://aws.amazon.com/tw/blogs/machine-learning/load-test-and-optimize-an-amazon-sagemaker-endpoint-using-automatic-scaling/
