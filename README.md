@@ -1,10 +1,10 @@
 # Sagemaker 快速訓練/部署模型
 
-使用到的功能：
+使用到的 Sagemaker 功能：
 1. Notebook Instance
 2. Ground Truth (用來標記資料)
 3. Training jobs (訓練及建立模型)
-4. Endpoint
+4. Endpoint（部署）
 
 #### 整套流程
 
@@ -98,8 +98,7 @@ Sagemaker ML 任務整體服務框架如下：
 1. 這裡使用 Sagemaker 內建的演算法：Vision - Object Detection (MxNet)
 2. 往下拉看到「輸入資料組態」內的設定如下：
    - 這個 Channel 可以幫助區分「訓練、測試、驗證」等資料集，此範例我們只使用兩個 channel：「train」、「validation」（針對不同演算法或任務，有各自的規定）。
-   - 
-   - ![](training_jobs_setting.png)
+   - ![](./docs/training_jobs_setting.png)
     - 屬性名稱「AttributeNames」，主要需要是輸入演算法的內容。
 3. S3 位置則設定為使用 Ground Truth 標記完的 output.manifest 位置（確保此檔案的 key 能正確對應到上圖的 AttributeNames）。
 4. 「紀錄包裝函式」RecordWrapperType 選擇「RecordIO」
@@ -252,7 +251,8 @@ with open("./inference_data/face1.jpeg", "rb") as image:
 10. Serving 過程發生例外時，要怎麼處理？回傳 default 值？
 11. 流量不固定要使用 Autoscaling?預設 Serve 要幾台？整體框架 cost?
 
-若有興趣知道上述的問題，可以參考另一篇 [Machine Learning Serving Example by AWS](https://github.com/kiangkiangkiang/Machine-Learning-Serving-Example-by-AWS)，推薦給對雲端服務有基本認知，對機器學習有基本認知，對模型服務有興趣的人！
+若有興趣知道上述的問題，可以參考另一篇 [Machine Learning Serving Example by AWS](https://github.com/kiangkiangkiang/Machine-Learning-Serving-Example-by-AWS)，推薦給對雲端服務有基本認知，對機器學習有基本認知，對模型服務有興趣的人，也會介紹更多透過 CLI 建立服務與設定參數，會由 GUI 設定整套 ML 流程，改成用指令。
+
 ---
 ## 參考
 
