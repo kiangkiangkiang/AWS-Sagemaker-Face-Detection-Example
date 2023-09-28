@@ -60,5 +60,4 @@ for i in range(5):
         endpoint_response = runtime.invoke_endpoint(EndpointName=endpoint_name, ContentType="image/jpeg", Body=b)
         results = endpoint_response["Body"].read()
         detections = json.loads(results)
-        print(detections["prediction"][0])
-        # visualize_detection(f"./inference_data/face{num}.jpeg", detections["prediction"], 0.25)
+        visualize_detection(f"./inference_data/face{num}.jpeg", detections["prediction"], 0.25)
