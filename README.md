@@ -268,3 +268,4 @@ with open("./inference_data/face1.jpeg", "rb") as image:
 10. Sagemaker 呼叫端點：https://docs.aws.amazon.com/zh_tw/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html
 11. Sagemaker 內建演算法：https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/algos.html
 12. 流量測試：https://aws.amazon.com/tw/blogs/machine-learning/load-test-and-optimize-an-amazon-sagemaker-endpoint-using-automatic-scaling/
+13. 建立自己的環境：https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/studio-lab-use-manage.html
