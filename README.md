@@ -84,7 +84,7 @@ Sagemaker ML 任務整體服務框架如下：
 將資料準備好後，我們即可開始訓練模型，Sagemaker 可選擇的訓練模型方式是：
 1. 使用內建演算法（基本任務都有，基本上只要是來自 Ground Truth 標記完的資料都能無痛串接，最快最方便）
 2. 自定義演算法（較為客製化的訓練方式，例如串接 LoRA 等等模塊）
-3. 自己準備 Container（按照 Sagemaker 準備好後，放到 ECR，[參考](https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/docker-containers.html）
+3. 自己準備 Container（按照 Sagemaker 準備好後，放到 ECR，[參考](https://docs.aws.amazon.com/zh_tw/sagemaker/latest/dg/docker-containers.html)
 4. 其他內建演算法
 
 在 Sagemaker 主控台左側，選擇「培訓」->「訓練任務」->「建立訓練任務」
